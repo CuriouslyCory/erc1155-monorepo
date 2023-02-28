@@ -1,5 +1,5 @@
 {
-  "name": "nft-template-v2",
+  "name": "erc1155-template",
   "private": true,
   "packageManager": "pnpm@7.13.0",
   "scripts": {
@@ -8,7 +8,7 @@
     "clean:workspaces": "turbo clean",
     "db:generate": "turbo db:generate",
     "db:push": "turbo db:push db:generate",
-    "dev": "turbo dev --filter @nft-template-v2/frontend",
+    "dev": "turbo dev --filter @erc1155-template/frontend",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "lint": "turbo lint",
     "FIXME:lint": "turbo lint && manypkg check",

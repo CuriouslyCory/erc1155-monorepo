@@ -2,7 +2,7 @@ import "@nomiclabs/hardhat-ethers";
 import { loadFixture } from "@nomicfoundation/hardhat-network-helpers";
 import { expect } from "chai";
 import { ethers } from "hardhat";
-import { ethereumRpcUri } from "@nft-template-v2/constants";
+import { ethereumRpcUri } from "@erc1155-template/constants";
 import { BigNumber, providers, Signer, Wallet } from "ethers";
 
 export const getSigner = (privateKey: string): Signer => {

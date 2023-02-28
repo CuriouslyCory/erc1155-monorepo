@@ -1,5 +1,5 @@
 {
-  "name": "@nft-template-v2/contract",
+  "name": "@erc1155-template/contract",
   "version": "0.9.0",
   "private": true,
   "main": "./index.ts",
@@ -10,7 +10,7 @@
     "1155:deploy:goerli": "pnpm exec hardhat run --network goerli scripts/deploy-1155.ts"
   },
   "dependencies": {
-    "@nft-template-v2/constants": "*",
+    "@erc1155-template/constants": "*",
     "@openzeppelin/contracts": "^4.8.1",
     "eslint-config-prettier": "^8.6.0",
     "eslint-plugin-node": "^11.1.0",

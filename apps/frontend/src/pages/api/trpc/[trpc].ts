@@ -1,4 +1,4 @@
-import { appRouter, createTRPCContext } from "@nft-template-v2/api";
+import { appRouter, createTRPCContext } from "@erc1155-template/api";
 import { createNextApiHandler } from "@trpc/server/adapters/next";
 
 // export API handler

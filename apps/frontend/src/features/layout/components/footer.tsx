@@ -1,4 +1,4 @@
-import { routes, siteInfo, socialLinks } from "@nft-template-v2/constants";
+import { routes, siteInfo, socialLinks } from "@erc1155-template/constants";
 import Link from "next/link";
 
 export const Footer = (): JSX.Element => {

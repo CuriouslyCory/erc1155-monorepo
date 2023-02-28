@@ -1,5 +1,5 @@
 {
-  "name": "@nft-template-v2/tailwind-config",
+  "name": "@erc1155-template/tailwind-config",
   "version": "0.1.0",
   "main": "index.js",
   "license": "MIT",

@@ -1,5 +1,5 @@
 {
-  "name": "@nft-template-v2/api",
+  "name": "@erc1155-template/api",
   "version": "0.1.0",
   "main": "./index.ts",
   "types": "./index.ts",
@@ -10,11 +10,12 @@
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
-    "@nft-template-v2/auth": "*",
-    "@nft-template-v2/constants": "*",
-    "@nft-template-v2/db": "*",
+    "@erc1155-template/auth": "*",
+    "@erc1155-template/constants": "*",
+    "@erc1155-template/db": "*",
     "@trpc/client": "^10.8.1",
     "@trpc/server": "^10.8.1",
+    "alchemy-sdk": "^2.5.0",
     "ethers": "^5.7.2",
     "superjson": "1.9.1",
     "zod": "^3.20.0"

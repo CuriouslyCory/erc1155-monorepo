@@ -1,4 +1,4 @@
-import { appRouter, createTRPCContext } from "@nft-template-v2/api";
+import { appRouter, createTRPCContext } from "@erc1155-template/api";
 import { TRPCError } from "@trpc/server";
 import { getHTTPStatusCodeFromError } from "@trpc/server/http";
 import { type NextApiRequest, type NextApiResponse } from "next";

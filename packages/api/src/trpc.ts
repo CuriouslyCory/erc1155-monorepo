@@ -18,8 +18,8 @@
  */
 import { type CreateNextContextOptions } from "@trpc/server/adapters/next";
 
-import { getServerSession, type Session } from "@nft-template-v2/auth";
-import { prisma } from "@nft-template-v2/db";
+import { getServerSession, type Session } from "@erc1155-template/auth";
+import { prisma } from "@erc1155-template/db";
 
 type CreateContextOptions = {
   session: Session | null;

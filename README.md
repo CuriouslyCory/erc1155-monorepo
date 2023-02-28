@@ -25,7 +25,7 @@ To get it running, follow the steps below:
 
    # clone repository
    git clone <github repo address>
-   cd nft-template-v2
+   cd erc1155-template
 
    # Install dependencies
    pnpm i

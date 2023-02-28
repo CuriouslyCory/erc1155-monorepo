@@ -1,4 +1,3 @@
-export { erc721abi } from "./src/erc271abi";
 export { routes } from "./src/routes";
 export { siteInfo } from "./src/site-info";
 export { socialLinks } from "./src/socials";

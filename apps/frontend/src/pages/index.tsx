@@ -1,4 +1,4 @@
-import { siteInfo } from "@nft-template-v2/constants";
+import { siteInfo } from "@erc1155-template/constants";
 import { type NextPage } from "next";
 import Head from "next/head";
 import { Hero } from "../features/hero/hero";

@@ -1,5 +1,5 @@
 {
-  "name": "@nft-template-v2/constants",
+  "name": "@erc1155-template/constants",
   "version": "0.1.0",
   "main": "./index.ts",
   "types": "./index.ts",

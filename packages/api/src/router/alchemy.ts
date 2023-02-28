@@ -1,5 +1,4 @@
 import { z } from "zod";
-import { collections } from "@nft-template-v2/constants";
 import { createTRPCRouter, publicProcedure } from "../trpc";
 import { getAlchemyClient } from "../common/alchemy";
 
@@ -14,9 +13,8 @@ export const alchemyRouter = createTRPCRouter({
     .query(({ input }) => {
       const alchemy = getAlchemyClient();
       return alchemy.nft.getNftsForOwner(input?.address ?? "", {
-        contractAddresses: [...collections.entries()].map(
-          ([, c]) => c.contractAddress,
-        ),
+        //GameItems collection on goerli, deploy your own and replace this address
+        contractAddresses: ["0xBB461Fd70ab6DE225cC3019a7025C10CF9defcA4"],
         pageKey: input.pageKey,
       });
     }),

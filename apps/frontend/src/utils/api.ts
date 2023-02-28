@@ -1,8 +1,8 @@
 import { createTRPCNext } from "@trpc/next";
 import { httpBatchLink, loggerLink } from "@trpc/client";
 import { inferRouterInputs, inferRouterOutputs } from "@trpc/server";
-import type { AppRouter } from "@nft-template-v2/api";
-import { transformer } from "@nft-template-v2/api/transformer";
+import type { AppRouter } from "@erc1155-template/api";
+import { transformer } from "@erc1155-template/api/transformer";
 
 const getBaseUrl = () => {
   if (typeof window !== "undefined") return ""; // browser should use relative url

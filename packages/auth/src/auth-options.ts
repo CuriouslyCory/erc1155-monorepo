@@ -1,7 +1,7 @@
 import { type NextAuthOptions } from "next-auth";
 import DiscordProvider from "next-auth/providers/discord";
 
-import { prisma } from "@nft-template-v2/db";
+import { prisma } from "@erc1155-template/db";
 import { PrismaAdapter } from "@next-auth/prisma-adapter";
 
 export const authOptions: NextAuthOptions = {

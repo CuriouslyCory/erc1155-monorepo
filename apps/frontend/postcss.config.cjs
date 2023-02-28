@@ -1,1 +1,1 @@
-module.exports = require("@nft-template-v2/tailwind-config/postcss");
+module.exports = require("@erc1155-template/tailwind-config/postcss");

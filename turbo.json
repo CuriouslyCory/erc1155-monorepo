@@ -33,9 +33,6 @@
     "contract:test": {
       "cache": false
     },
-    "721:deploy:goerli": {
-      "cache": false
-    },
     "1155:deploy:goerli": {
       "cache": false
     }

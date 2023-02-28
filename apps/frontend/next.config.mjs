@@ -10,10 +10,10 @@ const config = {
   reactStrictMode: true,
   /** Enables hot reloading for local packages without a build step */
   transpilePackages: [
-    "@nft-template-v2/api",
-    "@nft-template-v2/auth",
-    "@nft-template-v2/db",
-    "@nft-template-v2/constants",
+    "@erc1155-template/api",
+    "@erc1155-template/auth",
+    "@erc1155-template/db",
+    "@erc1155-template/constants",
   ],
   images: {
     domains: [

@@ -13,7 +13,7 @@ import { api } from "~/utils/api";
 import Layout from "~/features/layout";
 import { EthereumClient, modalConnectors } from "@web3modal/ethereum";
 import { Web3Modal } from "@web3modal/react";
-import { siteInfo } from "@nft-template-v2/constants";
+import { siteInfo } from "@erc1155-template/constants";
 
 const { chains, provider } = configureChains(
   [goerli, mainnet],

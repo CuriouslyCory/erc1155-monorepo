@@ -1,6 +1,9 @@
 import { z } from "zod";
 import { createTRPCRouter, publicProcedure } from "../trpc";
 
+/**
+ * Type def for our item metadata
+ */
 type Item = {
   name: string;
   description: string;
@@ -9,6 +12,9 @@ type Item = {
   value?: number;
 };
 
+/**
+ * In a real world application you would probably store this information in a database or external flatfile.
+ */
 const metadata: readonly Item[] = [
   {
     name: "Gold",
@@ -32,6 +38,9 @@ const metadata: readonly Item[] = [
   },
 ] as const;
 
+/**
+ * Item router validates the input and returns the item metadata if it exists.
+ */
 export const itemRouter = createTRPCRouter({
   getById: publicProcedure
     .input(

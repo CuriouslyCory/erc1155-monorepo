@@ -16,7 +16,6 @@
     "@trpc/client": "^10.8.1",
     "@trpc/server": "^10.8.1",
     "ethers": "^5.7.2",
-    "nft.storage": "^7.0.0",
     "superjson": "1.9.1",
     "zod": "^3.20.0"
   },

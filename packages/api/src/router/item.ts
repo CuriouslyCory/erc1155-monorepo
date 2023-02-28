@@ -4,7 +4,7 @@ import { createTRPCRouter, publicProcedure } from "../trpc";
 /**
  * Type def for our item metadata
  */
-type Item = {
+export type GameItem = {
   name: string;
   description: string;
   image: string;
@@ -15,7 +15,7 @@ type Item = {
 /**
  * In a real world application you would probably store this information in a database or external flatfile.
  */
-const metadata: readonly Item[] = [
+const metadata: readonly GameItem[] = [
   {
     name: "Gold",
     description:
@@ -42,6 +42,7 @@ const metadata: readonly Item[] = [
  * Item router validates the input and returns the item metadata if it exists.
  */
 export const itemRouter = createTRPCRouter({
+  getAll: publicProcedure.query(() => metadata),
   getById: publicProcedure
     .input(
       z.object({

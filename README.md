@@ -40,6 +40,11 @@ To get it running, follow the steps below:
 
 You should see output showing the dev server is live and available at https://localhost:3000, or an alternate port if 3000 is being used on your system already.
 
+### Other Notable Commands
+
+- `turbo contract:test` - Run the smart contract tests
+- `turbo 1155:deploy:goerli` - Deploy the smart contract to goerli
+
 ## Notable paths/files
 
 | File Path                                                                  | Primary Use               | Notes                                                         |

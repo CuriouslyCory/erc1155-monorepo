@@ -1,0 +1,28 @@
+{
+  "name": "@nft-template-v2/api",
+  "version": "0.1.0",
+  "main": "./index.ts",
+  "types": "./index.ts",
+  "license": "MIT",
+  "scripts": {
+    "clean": "rm -rf .turbo node_modules",
+    "lint": "eslint",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@nft-template-v2/auth": "*",
+    "@nft-template-v2/constants": "*",
+    "@nft-template-v2/db": "*",
+    "@trpc/client": "^10.8.1",
+    "@trpc/server": "^10.8.1",
+    "ethers": "^5.7.2",
+    "nft.storage": "^7.0.0",
+    "superjson": "1.9.1",
+    "zod": "^3.20.0"
+  },
+  "devDependencies": {
+    "@types/sharp": "^0.31.1",
+    "eslint": "^8.30.0",
+    "typescript": "^4.9.4"
+  }
+}

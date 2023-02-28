@@ -1,0 +1,54 @@
+{
+  "name": "@nft-template-v2/contract",
+  "version": "0.9.0",
+  "private": true,
+  "main": "./index.ts",
+  "scripts": {
+    "contract:test": "pnpm exec hardhat test",
+    "clean": "rm -rf .turbo node_modules typechain-types artifacts cache",
+    "721:deploy:goerli": "pnpm exec hardhat run --network goerli scripts/deploy.ts",
+    "1155:deploy:goerli": "pnpm exec hardhat run --network goerli scripts/deploy-1155.ts"
+  },
+  "dependencies": {
+    "@nft-template-v2/constants": "*",
+    "@openzeppelin/contracts": "^4.8.1",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier-plugin-solidity": "^1.1.1"
+  },
+  "devDependencies": {
+    "@ethersproject/abi": "^5.7.0",
+    "@ethersproject/bytes": "^5.7.0",
+    "@ethersproject/providers": "^5.7.2",
+    "@nomicfoundation/hardhat-chai-matchers": "^1.0.5",
+    "@nomicfoundation/hardhat-network-helpers": "^1.0.7",
+    "@nomicfoundation/hardhat-toolbox": "^2.0.1",
+    "@nomiclabs/hardhat-ethers": "^2.2.2",
+    "@nomiclabs/hardhat-etherscan": "^3.1.5",
+    "@typechain/ethers-v5": "^10.2.0",
+    "@typechain/hardhat": "^6.1.5",
+    "@types/chai": "^4.3.4",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "^18.0.0",
+    "chai": "^4.3.7",
+    "dotenv-cli": "^6.0.0",
+    "erc721a": "^4.2.3",
+    "eslint": "^8.30.0",
+    "eslint-config-standard": "^17.0.0",
+    "ethers": "^5.7.2",
+    "hardhat": "^2.12.6",
+    "hardhat-gas-reporter": "^1.0.9",
+    "solidity-coverage": "^0.8.2",
+    "ts-node": "^10.9.1",
+    "typechain": "^8.1.1",
+    "typescript": "^4.9.4"
+  },
+  "eslintConfig": {
+    "extends": [
+      "standard",
+      "plugin:prettier/recommended",
+      "plugin:node/recommended"
+    ]
+  }
+}

@@ -1,4 +1,12 @@
-# NFT Template v2
+# ERC1155 NFT Template
+
+## Credits
+
+This [Turborepo](https://turbo.build/) implementation of the [create-t3-app](https://create.t3.gg) stack was originally created by [Julius Marminge](https://github.com/juliusmarminge). Original template can be found [here](https://github.com/t3-oss/create-t3-turbo).
+
+[Hardhat](https://hardhat.org/) has made managing and deploying smart contracts so much better!
+
+Thank you to all of the contributors to these amazing projects!
 
 ## Quick Start
 
@@ -8,13 +16,6 @@ To get it running, follow the steps below:
 
 1. Project requires [npm](https://nodejs.org/en/download/). Follow the instructions specific to your OS to install it.
 2. Clone this repository and browse to the file location in your terminal
-
-- From github desktop you can find the file location by looking at the file path in file => clone repository
-- Once you have that open the command prompt (win + r => cmd)
-- Change directory to the file path `cd <file path>` (e.g. `cd C:\Users\username\Documents\The-Forge` (don't forget to add the `The-Forge` at the end as it won't be in the github file path)
-- You can run `explorer .` to open the file explorer in the current directory
-- Or you can run `notepad ./filename` to open a file in notepad
-
 3. ```bash
    # Install pnpm globally
    npm i -g pnpm
@@ -94,7 +95,7 @@ Let's deploy the Next.js application to [Vercel](https://vercel.com/). If you ha
 
 - Add new => project from your [team dashboard](https://vercel.com/dashboard)
 - Import from Git Repository => Github
-- Name your project (e.g. `forge-nft-frontend`)
+- Name your project (e.g. `my-curious-nft-project`)
 - Framework Preset: Next.js
 - Select the `apps/frontend` folder as the root directory (should be default)
 - Expand the build and output settings and apply the following configuration:

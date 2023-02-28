@@ -9,6 +9,9 @@ module.exports = {
       fontFamily: {
         oxygen: ["Oxygen Mono", ...defaultTheme.fontFamily.sans],
       },
+      gridTemplateRows: {
+        a1a: "auto 1fr auto",
+      },
     },
   },
   plugins: [],

@@ -42,13 +42,14 @@ You should see output showing the dev server is live and available at https://lo
 
 ## Notable paths/files
 
-| File Path                                                                  | Primary Use          | Notes                                                         |
-| -------------------------------------------------------------------------- | -------------------- | ------------------------------------------------------------- |
-| [`apps/frontend`](/apps/frontend)                                          | Next.js frontend     | Public frontend exposing the metadata api                     |
-| [`packages/constants/src/contract.ts`](packages/constants/src/contract.ts) | Contract addresses   | This is where the contract addresses are stored               |
-| [`packages/contract`](packages/contract)                                   | Smart contract       | This is where the smart contract and related tests are stored |
-| [`packages/contract/contracts`](packages/contract/contracts)               | Contract Code        | The actual solidity code for the contract                     |
-| [`packages/contract/test`](packages/contract/test)                         | Smart contract tests | This is where the smart contract tests are stored             |
+| File Path                                                                  | Primary Use               | Notes                                                         |
+| -------------------------------------------------------------------------- | ------------------------- | ------------------------------------------------------------- |
+| [`apps/frontend`](/apps/frontend)                                          | Next.js frontend          | Public frontend exposing the metadata api                     |
+| [`packages/api/src/router/item.ts`](packages/api/src/router/item.ts)       | Token Metadat Definitions | Logic to look up and render metadata                          |
+| [`packages/constants/src/contract.ts`](packages/constants/src/contract.ts) | Contract addresses        | This is where the contract addresses are stored               |
+| [`packages/contract`](packages/contract)                                   | Smart contract            | This is where the smart contract and related tests are stored |
+| [`packages/contract/contracts`](packages/contract/contracts)               | Contract Code             | The actual solidity code for the contract                     |
+| [`packages/contract/test`](packages/contract/test)                         | Smart contract tests      | This is where the smart contract tests are stored             |
 
 ## Smart contract deployment (do before frontend deployment)
 

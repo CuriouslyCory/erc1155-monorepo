@@ -3,14 +3,7 @@ import { loadFixture } from "@nomicfoundation/hardhat-network-helpers";
 import { expect } from "chai";
 import { ethers } from "hardhat";
 import { ethereumRpcUri } from "@nft-template-v2/constants";
-import {
-  BigNumber,
-  BigNumberish,
-  providers,
-  Signer,
-  utils,
-  Wallet,
-} from "ethers";
+import { BigNumber, providers, Signer, Wallet } from "ethers";
 
 export const getSigner = (privateKey: string): Signer => {
   const provider = new providers.JsonRpcProvider(ethereumRpcUri);

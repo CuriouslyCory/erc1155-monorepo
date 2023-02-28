@@ -51,7 +51,7 @@ You should see output showing the dev server is live and available at https://lo
 | [`packages/contract/contracts`](packages/contract/contracts)               | Contract Code             | The actual solidity code for the contract                     |
 | [`packages/contract/test`](packages/contract/test)                         | Smart contract tests      | This is where the smart contract tests are stored             |
 
-## Smart contract deployment (do before frontend deployment)
+## Smart contract deployment
 
 1. Follow the "Quick Start" above to prepare your environment
 2. Run test suite to ensure everything is working as expected
@@ -59,11 +59,11 @@ You should see output showing the dev server is live and available at https://lo
    # Deploy contracts to mainnet
    turbo contract:test
    ```
-3. Deploy contracts to mainnet
+3. Deploy contracts to goerli
 
    ```bash
    # Deploy contracts to mainnet
-   turbo contract:deploy:mainnet
+   turbo 1155:deploy:goerli
 
    # should provide some output that ends with something like this:
    # npx hardhat verify --network mainnet 0x790d0c76Fa8F8Fbd73F55518D6B98A1Eb9de0CfF
@@ -74,15 +74,7 @@ You should see output showing the dev server is live and available at https://lo
 
    ```
 
-4. Update the contract address in the constants package
-   Open the file [`packages/constants/src/contract.ts`](packages/constants/src/contract.ts) and fill the empty `contractAddress` entry
-   ```Typescript
-   export const contractAddress: MultiChainAddress = {
-      1: "<enter new contract address here>",
-      5: "0x86AA7Fdb444AB65e2c6ce4108B2900368e45693C",
-   } as const;
-   ```
-5. Commit the file to your git repo `git commit -am "update contract address" && git push`
+4. Commit the file to your git repo `git commit -am "update contract address" && git push`
 
 ## Preview/Production Deployment
 
@@ -104,26 +96,28 @@ Let's deploy the Next.js application to [Vercel](https://vercel.com/). If you ha
   - Output Directory: default/no change
   - Install command: `pnpm install --store=node_modules/.pnpm-store`
   - Development command: default/no change
-- Expand the environment variables section and enter the following:
+- Expand the environment variables section copy your entire .env file and paste into the first field
 
-  - _Currently unused, but needs to be defined_
-    Variable Name | Value
-    --- | ---
-    DATABASE_URL | file:./db.sqlite
+## Environment Variable Information
 
-  - NextAuth. Currently unused, but could be very useful in the future.
-    Variable Name | Value
-    --- | ---
-    NEXTAUTH_SECRET | any-random-string
-    NEXTAUTH_URL | http://localhost:3000
-    DISCORD_CLIENT_ID | add a space
-    DISCORD_CLIENT_SECRET | add a space
+- _Currently unused, but needs to be defined_
+  Variable Name | Value
+  --- | ---
+  DATABASE_URL | file:./db.sqlite
 
-  - Alchemy. Used for nft data lookup, and on-chain actions
-    Variable Name | Value
-    --- | ---
-    ALCHEMY_API_KEY | Create account and generate key for ethereum at https://dashboard.alchemy.com/
-    NEXT_PUBLIC_ALCHEMY_API_KEY | Duplicate of above, but for client side use. Create account and generate key for ethereum at https://dashboard.alchemy.com/
+- NextAuth. Currently unused, but great if you want to have auth in the future.
+  Variable Name | Value
+  --- | ---
+  NEXTAUTH_SECRET | any-random-string
+  NEXTAUTH_URL | http://localhost:3000
+  DISCORD_CLIENT_ID | add a space
+  DISCORD_CLIENT_SECRET | add a space
+
+- Alchemy. Used for nft data lookup, and on-chain actions
+  Variable Name | Value
+  --- | ---
+  ALCHEMY_API_KEY | Create account and generate key for ethereum at https://dashboard.alchemy.com/
+  NEXT_PUBLIC_ALCHEMY_API_KEY | Copied from above unless you want to seperate front and back
 
 - _IMPORTANT_ The following hardhat vars are **only required locally** for deploying contracts and do not need to be configured on vercel
   Variable Name | Value

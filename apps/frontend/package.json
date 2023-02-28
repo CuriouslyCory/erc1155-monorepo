@@ -22,8 +22,8 @@
     "@trpc/next": "^10.8.1",
     "@trpc/react-query": "^10.8.1",
     "@trpc/server": "^10.8.1",
-    "@web3modal/ethereum": "^2.1.1",
-    "@web3modal/react": "^2.1.1",
+    "@web3modal/ethereum": "^2.1.2",
+    "@web3modal/react": "^2.1.2",
     "class-variance-authority": "^0.4.0",
     "clsx": "^1.2.1",
     "ethers": "^5",
@@ -34,7 +34,7 @@
     "react-dom": "18.2.0",
     "react-icons": "^4.7.1",
     "tailwind-merge": "^1.10.0",
-    "wagmi": "^0.10.15",
+    "wagmi": "^0.11.7",
     "zod": "^3.20.0"
   },
   "devDependencies": {

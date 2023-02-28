@@ -2,14 +2,14 @@ import { ethers } from "hardhat";
 
 async function main() {
   const network = "goerli";
-  const ForgeNft = await ethers.getContractFactory("StandardERC721A");
-  const forgeNft = await ForgeNft.deploy();
+  const Erc721a = await ethers.getContractFactory("StandardERC721A");
+  const erc721a = await Erc721a.deploy();
 
-  await forgeNft.deployed();
+  await erc721a.deployed();
 
-  console.log(`StandardERC721A deployed to ${forgeNft.address}`);
+  console.log(`StandardERC721A deployed to ${erc721a.address}`);
   console.log(
-    `\nVerify:\nnpx hardhat verify --network ${network} ${forgeNft.address}`,
+    `\nVerify:\nnpx hardhat verify --network ${network} ${erc721a.address}`,
   );
 }
 

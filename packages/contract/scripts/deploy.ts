@@ -2,14 +2,17 @@ import { ethers } from "hardhat";
 
 async function main() {
   const network = "goerli";
-  const Erc721a = await ethers.getContractFactory("StandardERC721A");
-  const erc721a = await Erc721a.deploy();
+  const uri = "https://erc1155-monorepo-frontend.vercel.app/api/item/{id}.json";
+  const GameItems = await ethers.getContractFactory("GameItems");
+  const tokenName = "GameItems";
+  const tokenSymbol = "GITM";
+  const gameItems = await GameItems.deploy(uri, tokenName, tokenSymbol);
 
-  await erc721a.deployed();
+  await gameItems.deployed();
 
-  console.log(`StandardERC721A deployed to ${erc721a.address}`);
+  console.log(`GameItems deployed to ${gameItems.address}`);
   console.log(
-    `\nVerify:\nnpx hardhat verify --network ${network} ${erc721a.address}`,
+    `\nVerify:\nnpx hardhat verify --network ${network} ${gameItems.address} "${uri}" "${tokenName}" ${tokenSymbol}`,
   );
 }
 

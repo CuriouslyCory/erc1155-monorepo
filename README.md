@@ -8,11 +8,26 @@ This [Turborepo](https://turbo.build/) implementation of the [create-t3-app](htt
 
 Thank you to all of the contributors to these amazing projects!
 
+## How to use this project
+
+The short answer:
+
+- Deploy this repository to [Vercel](https://vercel.com)
+- Pop the url into the [deploy script](/packages/contract/scripts/deploy.ts)
+- deploy the contract to goerli (`turbo 1555:deploy:goerli`), and then test!
+
+The longer answer...
+The [NextJs](https://nextjs.org) frontend, found at [/apps/frontend/](/apps/frontend/), provides a website, but more importantly API endpoints that serve your metadata. This can quickly be deployed to [Vercel](https://vercel.com) to have you up and running in minutes! Your data will be found @ https://yourverceldomain.vercel.app/api/item/{itemId}
+
+The data is being served to the api path through a [tRPC router](https://trpc.io) ([/pakcages/api/src/router/item.ts](/pakcages/api/src/router/item.ts)) where you can customize your data. Whether you want to pull data from a database or define it as a static object, you can do it here. There is a prisma client attached to the router so you can easily define a database schema (or pull from an existing database) and use it to host your data.
+
+The Solidity contract [/packages/contract/contracts/standard-erc1155.sol](/packages/contract/contracts/standard-erc1155.sol) is a simple ERC1155 contract that allows you to mint and burn tokens. It also provides a function to set the metadata URI for each token. This URI is what the marketplaces and other data aggregators will use to look up the metadata for each token. Add your vercel domain to the [deploy script](/packages/contract/scripts/deploy.ts) and deploy the contract to goerli.
+
 ## Quick Start
 
 To get it running, follow the steps below:
 
-### Setup dependencies
+### Local setup dependencies
 
 1. Project requires [npm](https://nodejs.org/en/download/). Follow the instructions specific to your OS to install it.
 2. Clone this repository and browse to the file location in your terminal
@@ -40,21 +55,21 @@ To get it running, follow the steps below:
 
 You should see output showing the dev server is live and available at https://localhost:3000, or an alternate port if 3000 is being used on your system already.
 
-### Other Notable Commands
+## Other Notable Commands
 
 - `turbo contract:test` - Run the smart contract tests
 - `turbo 1155:deploy:goerli` - Deploy the smart contract to goerli
 
 ## Notable paths/files
 
-| File Path                                                                  | Primary Use               | Notes                                                         |
-| -------------------------------------------------------------------------- | ------------------------- | ------------------------------------------------------------- |
-| [`apps/frontend`](/apps/frontend)                                          | Next.js frontend          | Public frontend exposing the metadata api                     |
-| [`packages/api/src/router/item.ts`](packages/api/src/router/item.ts)       | Token Metadat Definitions | Logic to look up and render metadata                          |
-| [`packages/constants/src/contract.ts`](packages/constants/src/contract.ts) | Contract addresses        | This is where the contract addresses are stored               |
-| [`packages/contract`](packages/contract)                                   | Smart contract            | This is where the smart contract and related tests are stored |
-| [`packages/contract/contracts`](packages/contract/contracts)               | Contract Code             | The actual solidity code for the contract                     |
-| [`packages/contract/test`](packages/contract/test)                         | Smart contract tests      | This is where the smart contract tests are stored             |
+| File Path                                                                  | Primary Use                | Notes                                                         |
+| -------------------------------------------------------------------------- | -------------------------- | ------------------------------------------------------------- |
+| [`apps/frontend`](/apps/frontend)                                          | Next.js frontend           | Public frontend exposing the metadata api                     |
+| [`packages/api/src/router/item.ts`](packages/api/src/router/item.ts)       | Token Metadata Definitions | Logic to look up and render metadata                          |
+| [`packages/constants/src/contract.ts`](packages/constants/src/contract.ts) | Contract addresses         | This is where the contract addresses are stored               |
+| [`packages/contract`](packages/contract)                                   | Smart contract             | This is where the smart contract and related tests are stored |
+| [`packages/contract/contracts`](packages/contract/contracts)               | Contract Code              | The actual solidity code for the contract                     |
+| [`packages/contract/test`](packages/contract/test)                         | Smart contract tests       | This is where the smart contract tests are stored             |
 
 ## Smart contract deployment
 

@@ -12,7 +12,8 @@ Thank you to all of the contributors to these amazing projects!
 
 The short answer:
 
-- Deploy this repository to [Vercel](https://vercel.com)
+- Click Use this template button
+- Deploy your repository to [Vercel](https://vercel.com)
 - Pop the url into the [deploy script](/packages/contract/scripts/deploy.ts)
 - deploy the contract to goerli (`turbo 1555:deploy:goerli`), and then test!
 
@@ -33,8 +34,9 @@ To get it running, follow the steps below:
 ### Local setup dependencies
 
 1. Project requires [npm](https://nodejs.org/en/download/). Follow the instructions specific to your OS to install it.
-2. Clone this repository and browse to the file location in your terminal
-3. ```bash
+2. Click "Use this template" up above.
+3. Clone your new repository and browse to the file location in your terminal
+4. ```bash
    # Install pnpm globally
    npm i -g pnpm
 

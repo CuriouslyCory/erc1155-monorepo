@@ -17,6 +17,9 @@ The short answer:
 - deploy the contract to goerli (`turbo 1555:deploy:goerli`), and then test!
 
 The longer answer...
+
+<img src="/erc1155-template.png" alt="Explainer Graphic" title="Package outline">
+
 The [NextJs](https://nextjs.org) frontend, found at [/apps/frontend/](/apps/frontend/), provides a website, but more importantly API endpoints that serve your metadata. This can quickly be deployed to [Vercel](https://vercel.com) to have you up and running in minutes! Your data will be found @ https://yourverceldomain.vercel.app/api/item/{itemId}
 
 The data is being served to the api path through a [tRPC router](https://trpc.io) ([/pakcages/api/src/router/item.ts](/pakcages/api/src/router/item.ts)) where you can customize your data. Whether you want to pull data from a database or define it as a static object, you can do it here. There is a prisma client attached to the router so you can easily define a database schema (or pull from an existing database) and use it to host your data.

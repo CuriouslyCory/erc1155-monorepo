@@ -2,7 +2,7 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
 
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+const config = {
   content: ["./src/**/*.{ts,tsx}", "./src/_app.tsx"],
   theme: {
     extend: {
@@ -16,3 +16,5 @@ module.exports = {
   },
   plugins: [],
 };
+
+module.exports = config;
